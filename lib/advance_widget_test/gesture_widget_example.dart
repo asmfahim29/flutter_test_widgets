@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class GestureDetectorTestScreen extends StatefulWidget {
@@ -15,7 +14,6 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
   String? seriesNumber = '4';
   double _scaleFactor = 1.0;
   double _initialScale = 1.0;
-  double _rotation = 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,9 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
                 setState(() {
                   _scaleFactor = (_initialScale * details.scale);
 
-                  print("-========------$_scaleFactor");
+                  if (kDebugMode) {
+                    print("-========------$_scaleFactor");
+                  }
                   // Clamp ensures the scale factor stays within reasonable bounds
                 });
 
@@ -43,7 +43,7 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
                 child: Center(
                   child: Text(
                     "FLUTTER",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                     textScaleFactor: _scaleFactor,
 
                   ),
@@ -52,7 +52,6 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
             )
           : GestureDetector(
               onHorizontalDragUpdate: (details) {
-                print('Container horizontal drag start');
                 if (details.delta.dx > 0) {
                   setState(() {
                     text = 'Dragged to right';
@@ -66,7 +65,6 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
                 }
               },
               onVerticalDragUpdate: (details) {
-                print('Container horizontal drag start');
                 if (details.delta.dy > 0) {
                   setState(() {
                     text = 'Dragged to down';
@@ -88,7 +86,7 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
                 child: Center(
                   child: Text(
                     text!,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 20,
                     ),
