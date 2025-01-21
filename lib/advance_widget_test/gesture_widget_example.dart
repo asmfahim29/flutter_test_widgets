@@ -6,8 +6,7 @@ class GestureDetectorTestScreen extends StatefulWidget {
   const GestureDetectorTestScreen({super.key});
 
   @override
-  State<GestureDetectorTestScreen> createState() =>
-      _GestureDetectorTestScreenState();
+  State<GestureDetectorTestScreen> createState() => _GestureDetectorTestScreenState();
 }
 
 class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
@@ -28,13 +27,14 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
           ? GestureDetector(
               onScaleStart: (details) {
                 _initialScale = _scaleFactor;
-                print("-========------$_initialScale");
+                // print("-========------$_initialScale");
               },
               onScaleUpdate: (details) {
                 setState(() {
-                  _scaleFactor = _initialScale * details.scale;
+                  _scaleFactor = (_initialScale * details.scale);
 
-                  print("-=--=-=-=-$_scaleFactor");
+                  print("-========------$_scaleFactor");
+                  // Clamp ensures the scale factor stays within reasonable bounds
                 });
 
               },
