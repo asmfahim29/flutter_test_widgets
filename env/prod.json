@@ -1,0 +1,5 @@
+{
+  "baseUrl" : "http://example.com",
+  "apiKey" : "some_key_for_PRD",
+  "secretKey" : "some_secret_for_PRD"
+}

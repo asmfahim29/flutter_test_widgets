@@ -1,0 +1,5 @@
+{
+  "baseUrl" : "http://stg-example.com",
+  "apiKey" : "some_key_for_STG",
+  "secretKey" : "some_secret_for_STG"
+}
