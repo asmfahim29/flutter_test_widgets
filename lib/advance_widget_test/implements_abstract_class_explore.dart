@@ -1,24 +1,16 @@
 void main() {
-
   // Implements(@override)
-
 
   final car = Car();
   final truck = Truck();
 
-
   print(car.noOfWheels);
   print(truck.noOfWheels);
-
 
   final workWithBothClass = WorkWithBothClass();
 
   workWithBothClass.accelerate();
-
-
 }
-
-
 
 class Vehicle {
   bool isEngineIsWorking = false;
@@ -28,18 +20,14 @@ class Vehicle {
   void accelerate() {
     print("Accelerating");
   }
-
 }
-
 
 class Car extends Vehicle {
   int noOfWheels = 4;
 
-
-  void printWheels () {
+  void printWheels() {
     print(noOfWheels);
   }
-
 
   /// for inherite a class super gives a reference of that parent class to access the properties, In terms of Implements it can not have any super
 
@@ -47,18 +35,14 @@ class Car extends Vehicle {
   void accelerate() {
     super.accelerate();
   }
-
 }
-
 
 class Truck extends Vehicle {
   int noOfWheels = 8;
 
-
-  void printWheels () {
+  void printWheels() {
     print(noOfWheels);
   }
-
 }
 
 class Bike implements Vehicle {
@@ -71,19 +55,16 @@ class Bike implements Vehicle {
   @override
   int noOfWheels = 2;
 
-
   @override
-  void accelerate () {
+  void accelerate() {
     print("Accelerating bike");
   }
 }
-
 
 class ExtendClass {
   bool isEngineIsWorking = false;
   bool isLightOn = true;
   int noOfWheels = 10;
-
 }
 
 class ImplementsClass {
@@ -92,18 +73,13 @@ class ImplementsClass {
   }
 }
 
-
 class WorkWithBothClass extends ExtendClass implements ImplementsClass {
-
   @override
-  void accelerate () {
+  void accelerate() {
     print("===extend ExtendClass and implements ImplementClass===");
 
     print(isEngineIsWorking);
 
     print(isLightOn);
   }
-
-
-
 }

@@ -1,18 +1,15 @@
 void main() {
-
   print(Constants.greetings);
   print(Constants.bye);
 
   print(Constants.giveMeSomeValue());
-
 }
-
 
 class Constants {
 //   String greetings = "Hello, Welcome to the office";
 //   String byr = "Bye!";
 
-  Constants(){
+  Constants() {
     print("Constants constructor is called");
   }
 
@@ -20,15 +17,8 @@ class Constants {
   static String greetings = "Hello, Welcome to the office";
   static String bye = "Bye!";
 
-
   /// static Methods
-  static int giveMeSomeValue () {
+  static int giveMeSomeValue() {
     return 10;
   }
-
 }
-
-
-
-
-

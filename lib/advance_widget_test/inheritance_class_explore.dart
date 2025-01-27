@@ -1,11 +1,9 @@
 void main() {
-
   // Inheritance
   final car1 = Car();
 
   print(car1.speed);
   print(car1.isEngineIsWorking);
-
 
   final car = Car();
 
@@ -15,25 +13,16 @@ void main() {
 
   car.printSpeed();
 
-
-
-
-
-
-
   // OOPS
-
 }
-
 
 class Vehicle2 {
   String alermWarning = "Please slowdown speed";
   int speed = 15;
 
-  void accelerate (){
+  void accelerate() {
     speed += 30;
   }
-
 }
 
 class Vehicle extends Vehicle2 {
@@ -41,23 +30,15 @@ class Vehicle extends Vehicle2 {
   bool isLightOn = true;
 
   @override
-  int accelerate () {
+  int accelerate() {
     return speed += 10;
   }
-
 }
-
 
 class Car extends Vehicle {
   int noOfWheels = 4;
 
-
-  void printSpeed () {
+  void printSpeed() {
     print(speed);
   }
-
 }
-
-
-
-

@@ -1,5 +1,4 @@
 void main() {
-
 //   Cookie cookie = Cookie();
 //   final cookie = CookieWithConstructor("Triangle", 25.36, 68);
 
@@ -17,16 +16,13 @@ void main() {
   anotherCookie.setWidth = 6;
 
   print(anotherCookie.calculateSize());
-
 }
-
 
 class Cookie {
   /// variables
   String shape = "Circle";
   int quantity = 20;
   double size = 25.36; //cm
-
 
   // private variables (private variables are private on a file)
   String _privateVariable = "PrivateVariable";
@@ -39,8 +35,6 @@ class Cookie {
   int get height => _height;
 
   int get width => _width;
-
-
 
   // Setters(no return type just assign the variable)
 
@@ -61,23 +55,16 @@ class Cookie {
     return height * width;
   }
 
-
   // Static variables
-
-
-
-
 
   /// functions
   void baking() {
     print("Baking Started");
   }
 
-
   bool isCookingClosed() {
     return false;
   }
-
 }
 
 /// class with constructor
@@ -100,23 +87,18 @@ class CookieWithConstructor {
 //   CookieWithConstructor();
 
   /// parameterized constructor
-  CookieWithConstructor({required this.shape, required this.size, required this.quantity}){
+  CookieWithConstructor(
+      {required this.shape, required this.size, required this.quantity}) {
     baking();
   }
 
-
-
   /// functions
   void baking() {
-    print("Baking Started with $shape Shape, Size $size cm, Quantity $quantity ");
+    print(
+        "Baking Started with $shape Shape, Size $size cm, Quantity $quantity ");
   }
-
 
   bool isCookingClosed() {
     return false;
   }
-
 }
-
-
-
