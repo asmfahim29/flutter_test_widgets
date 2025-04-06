@@ -15,8 +15,6 @@ class IsolateTestScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("assets/gifs/Animation - 1737433374916.gif"),
-
-
               ElevatedButton(
                 onPressed: () {
                   // Add your code here
@@ -25,20 +23,20 @@ class IsolateTestScreen extends StatelessWidget {
                 child: const Text("Test 1"),
               ),
               ElevatedButton(
-                onPressed: () async{
+                onPressed: () async {
                   final receivePort = ReceivePort();
                   await Isolate.spawn(complexTask2, receivePort.sendPort);
                   receivePort.listen((total) {
                     debugPrint("-=-=-=-Result 2 is : $total");
                   });
-
                 },
                 child: const Text("Isolate Test"),
               ),
               ElevatedButton(
                 onPressed: () async {
                   final receivePort = ReceivePort();
-                  await Isolate.spawn(complexTask3, Data(500, receivePort.sendPort));
+                  await Isolate.spawn(
+                      complexTask3, Data(500, receivePort.sendPort));
                   receivePort.listen((total) {
                     debugPrint("-=-=-=-Result 3 is : $total");
                   });
@@ -48,7 +46,8 @@ class IsolateTestScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () async {
                   final receivePort = ReceivePort();
-                  await Isolate.spawn(complexTask4, (iteration: 100000000, sendPort: receivePort.sendPort));
+                  await Isolate.spawn(complexTask4,
+                      (iteration: 100000000, sendPort: receivePort.sendPort));
                   receivePort.listen((total) {
                     debugPrint("-=-=-=-Result 4 is : $total");
                   });
@@ -69,14 +68,12 @@ class IsolateTestScreen extends StatelessWidget {
     }
     debugPrint("-=-=-=-total is : $total");
   }
-
 }
 
 /// --- End of Main Screen ----
 
-
 ///Isolate example 1
-complexTask2 (SendPort sendPort) async{
+complexTask2(SendPort sendPort) async {
   var total = 0;
   for (int i = 0; i <= 99999999; i++) {
     total = total + i;
@@ -85,7 +82,7 @@ complexTask2 (SendPort sendPort) async{
 }
 
 /// Isolate example 2
-complexTask3 (Data data) async{
+complexTask3(Data data) async {
   var total = 0;
   for (int i = 0; i <= data.iteration; i++) {
     total = total + i;
@@ -98,16 +95,13 @@ class Data {
   final SendPort sendPort;
 
   Data(this.iteration, this.sendPort);
-
 }
 
 /// Isolate example 3
-complexTask4(({int iteration, SendPort sendPort})data) async{
+complexTask4(({int iteration, SendPort sendPort}) data) async {
   var total = 0;
   for (int i = 0; i <= data.iteration; i++) {
     total = total + i;
   }
   data.sendPort.send(total);
 }
-
-

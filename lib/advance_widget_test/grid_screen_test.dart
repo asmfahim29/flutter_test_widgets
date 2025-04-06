@@ -2,24 +2,70 @@ import 'package:flutter/material.dart';
 
 class GridViewExample extends StatelessWidget {
   final List<GridItem> items = [
-    GridItem(name: "Item 1", imageUrl: "https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 2", imageUrl: "https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 3", imageUrl: "https://images.freeimages.com/images/large-previews/9f9/selfridges-2-1470748.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 4", imageUrl: "https://images.freeimages.com/images/large-previews/866/butterfly-1-1535829.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 5", imageUrl: "https://images.freeimages.com/variants/pgFBx5hMEeeJ1s6eWuDjHBZe/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
-
-    GridItem(name: "Item 1", imageUrl: "https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 2", imageUrl: "https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 3", imageUrl: "https://images.freeimages.com/images/large-previews/9f9/selfridges-2-1470748.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 4", imageUrl: "https://images.freeimages.com/images/large-previews/866/butterfly-1-1535829.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 5", imageUrl: "https://images.freeimages.com/variants/pgFBx5hMEeeJ1s6eWuDjHBZe/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
-
-    GridItem(name: "Item 1", imageUrl: "https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 2", imageUrl: "https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 3", imageUrl: "https://images.freeimages.com/images/large-previews/9f9/selfridges-2-1470748.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 4", imageUrl: "https://images.freeimages.com/images/large-previews/866/butterfly-1-1535829.jpg?fmt=webp&w=500"),
-    GridItem(name: "Item 5", imageUrl: "https://images.freeimages.com/variants/pgFBx5hMEeeJ1s6eWuDjHBZe/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
-    GridItem(name: "Item 6", imageUrl: "https://images.freeimages.com/variants/2nWZ2oM6P683by9Nnevqv1yJ/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 1",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 2",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 3",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/9f9/selfridges-2-1470748.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 4",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/866/butterfly-1-1535829.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 5",
+        imageUrl:
+            "https://images.freeimages.com/variants/pgFBx5hMEeeJ1s6eWuDjHBZe/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 1",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 2",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 3",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/9f9/selfridges-2-1470748.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 4",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/866/butterfly-1-1535829.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 5",
+        imageUrl:
+            "https://images.freeimages.com/variants/pgFBx5hMEeeJ1s6eWuDjHBZe/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 1",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 2",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 3",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/9f9/selfridges-2-1470748.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 4",
+        imageUrl:
+            "https://images.freeimages.com/images/large-previews/866/butterfly-1-1535829.jpg?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 5",
+        imageUrl:
+            "https://images.freeimages.com/variants/pgFBx5hMEeeJ1s6eWuDjHBZe/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
+    GridItem(
+        name: "Item 6",
+        imageUrl:
+            "https://images.freeimages.com/variants/2nWZ2oM6P683by9Nnevqv1yJ/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500"),
   ];
 
   GridViewExample({super.key});
@@ -59,10 +105,9 @@ class GridViewExample extends StatelessWidget {
                   child: Text(
                     item.name,
                     style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white
-                    ),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white),
                     textAlign: TextAlign.center,
                   ),
                 ),

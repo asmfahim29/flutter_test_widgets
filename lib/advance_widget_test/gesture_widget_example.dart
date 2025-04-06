@@ -5,7 +5,8 @@ class GestureDetectorTestScreen extends StatefulWidget {
   const GestureDetectorTestScreen({super.key});
 
   @override
-  State<GestureDetectorTestScreen> createState() => _GestureDetectorTestScreenState();
+  State<GestureDetectorTestScreen> createState() =>
+      _GestureDetectorTestScreenState();
 }
 
 class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
@@ -36,7 +37,6 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
                   }
                   // Clamp ensures the scale factor stays within reasonable bounds
                 });
-
               },
               child: Container(
                 color: Colors.yellow,
@@ -45,7 +45,6 @@ class _GestureDetectorTestScreenState extends State<GestureDetectorTestScreen> {
                     "FLUTTER",
                     style: const TextStyle(fontWeight: FontWeight.bold),
                     textScaleFactor: _scaleFactor,
-
                   ),
                 ),
               ),

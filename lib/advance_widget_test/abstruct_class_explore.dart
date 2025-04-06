@@ -25,6 +25,7 @@ class Car extends Vehicle {
   void deAccelerate() {
     print("car is de accelerating to 20 mph");
   }
+
 }
 
 class Truck implements Vehicle {

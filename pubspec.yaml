@@ -13,6 +13,16 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   just_audio: ^0.9.30
+  liquid_pull_to_refresh:
+  file_picker:
+  path:
+  toastification:
+  tap_to_expand:
+  reaction_askany:
+  qr_flutter:
+  flutter_staggered_grid_view:
+  translator:
+
 
 dev_dependencies:
   flutter_test:
@@ -31,3 +41,4 @@ flutter:
     - assets/mp3s/
     - assets/gifs/
     - assets/product_images/
+    - assets/env/

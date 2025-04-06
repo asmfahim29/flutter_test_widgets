@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class ExpansionTileAndPanel extends StatefulWidget {
   const ExpansionTileAndPanel({super.key});
 

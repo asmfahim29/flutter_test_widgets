@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:widgets_test_screen/listview_model.dart';
 
-
 class ListViewScreeTest extends StatefulWidget {
   const ListViewScreeTest({super.key});
 
@@ -25,8 +24,9 @@ class _ListViewScreeTestState extends State<ListViewScreeTest> {
   ];
 
   FixedExtentScrollController fixedExtentScrollController =
-  FixedExtentScrollController();
-  final AudioPlayer _audioPlayer = AudioPlayer(); // Create audio player instance
+      FixedExtentScrollController();
+  final AudioPlayer _audioPlayer =
+      AudioPlayer(); // Create audio player instance
   int _selectedIndex = 0;
 
   @override
@@ -52,7 +52,8 @@ class _ListViewScreeTestState extends State<ListViewScreeTest> {
 
   Future<void> _playScrollSound() async {
     // Use a local asset or network sound
-    await _audioPlayer.setAudioSource(AudioSource.asset('assets/mp3s/minimal-pop-click-ui-13-198313.mp3'));
+    await _audioPlayer.setAudioSource(
+        AudioSource.asset('assets/mp3s/minimal-pop-click-ui-13-198313.mp3'));
     // await _audioPlayer.play(
     //     'assets/mp3s/minimal-pop-click-ui-13-198313.mp3',
     //     isLocal: true,
