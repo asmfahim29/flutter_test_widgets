@@ -9,6 +9,9 @@ void main () {
 
   CarHI carHI = CarHI();
   BikeHI bikeHI = BikeHI();
+
+  AmphibiousVehicle  amphibiousVehicle = AmphibiousVehicle();
+  amphibiousVehicle.amphibiousInfo();
 }
 
 // Single Inheritance
@@ -69,5 +72,35 @@ class BikeHI extends VehicleHI {
   }
 }
 
+// Multiple Inheritance (Through Interfaces) --> JaVa does not support multiple inheritance
 
+class LandVehicle {
+  void waterInfo() {
+    print("This is a land vehicle");
+  }
+}
+
+class WaterVehicle {
+  void landInfo() {
+    print("This is a water vehicle");
+  }
+}
+
+class AmphibiousVehicle implements LandVehicle, WaterVehicle {
+  @override
+  void amphibiousInfo() {
+    print("This is a amphibious vehicle");
+  }
+
+  @override
+  void landInfo() {
+    // TODO: implement landInfo
+  }
+
+  @override
+  void waterInfo() {
+    // TODO: implement waterInfo
+  }
+
+}
 
